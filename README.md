@@ -40,3 +40,13 @@ copy nginx.conf to vagrant /etc/nginx/sites-enabled/default
 
 run init to set app environment
 ./init
+
+added the following to composer.json
+composer global require "codeception/codeception=2.0.*"
+composer global require "codeception/specify=*"
+composer global require "codeception/verify=*"
+
+composer update
+
+alias codecept='/home/vitor/vagrant/cuca/app/vendor/bin/codecept'
+
