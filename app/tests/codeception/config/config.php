@@ -16,7 +16,21 @@ return [
             'dsn' => 'mysql:host=localhost;dbname=yii_tests',
         ],
         'mailer' => [
-            'useFileTransport' => true,
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => false,//set this property to false to send mails to real email addresses
+            //comment the following array to send mail using php's mail function
+            'messageConfig' => [
+                'charset' => 'UTF-8',
+                'from' => 'vitor@aleoy.com'
+            ],
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.gmail.com',
+                'username' => 'vitor@aleoy.com',
+                'password' => 'iphone5black',
+                'port' => '587',
+                'encryption' => 'tls',
+            ],
         ],
         'urlManager' => [
             'showScriptName' => true,
