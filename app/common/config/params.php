@@ -1,6 +1,6 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
-    'supportEmail' => 'support@example.com',
+    'adminEmail' => getenv('ADMIN_EMAIL'),
+    'supportEmail' => getenv('SUPPORT_EMAIL'),
     'user.passwordResetTokenExpire' => 3600,
 ];
